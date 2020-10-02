@@ -131,7 +131,6 @@ def train_model():
         optimizer.step()
 
         epoch_loss += loss.item()
-        break
 
     print("Mean epoch loss:", (epoch_loss / num_train_batches))
 
@@ -157,7 +156,6 @@ def eval_model():
         predictions = F.log_softmax(prediction_scores, dim=2)
         loss = compute_loss(predictions, de_output)
         epoch_loss += loss.item()
-        break
 
     print("Mean validation loss:", (epoch_loss / num_valid_batches))
 
