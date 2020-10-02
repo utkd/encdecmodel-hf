@@ -1,0 +1,36 @@
+{
+    "global_params" : {
+        "train_en_file" : "data/en_train.sample",
+        "train_de_file" : "data/de_train.sample",
+        "valid_en_file" : "data/en_valid.sample",
+        "valid_de_file" : "data/de_valid.sample"
+    },
+
+    "encoder_params" : {
+        "tokenizer_path" : "tokenizers/en_tok/",
+        "vocab_size" : 25000,
+        "min_freq" : 3,
+        "max_length" : 512,
+        "num_attn_heads" : 8,
+        "num_hidden_layers" : 8,
+        "hidden_size" : 512
+    },
+
+    "decoder_params" : {
+        "tokenizer_path" : "tokenizers/de_tok/",
+        "vocab_size" : 25000,
+        "min_freq" : 3,
+        "max_length" : 256,
+        "num_attn_heads" : 8,
+        "num_hidden_layers" : 8,
+        "hidden_size" : 512
+    },
+
+    "model_params" : {
+        "batch_size" : 16,
+        "num_epochs" : 1,
+        "lr": 0.0001,
+        "model_path" : "models/",
+        "model_name": "encdec.mdl"
+    }
+}
